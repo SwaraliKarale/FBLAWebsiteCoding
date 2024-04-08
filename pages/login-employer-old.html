@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employer Log In</title>
+    <!-- <link rel="stylesheet" href="./style/login-employer.css" /> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div class="main-page">
+
+        <nav>
+            <h2 class="logo">
+                <img src="../assets/CareerLink_Logo.png" alt="Company Logo" />
+                CareerLink
+            </h2>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./aboutus.html">About Us</a></li>
+                <li><a href="./testimonials.html">Testimonials</a></li>
+                <li><a href="./contactus.html">Contact Us</a></li>
+                <!-- add more if needed -->
+            </ul>
+        </nav>
+
+        <div class="login">
+            <h1>Login</h1>
+            <div>
+              <div class="txt_field">
+                <input type="text" id="username" required>
+                <span></span>
+                <label>Username</label>
+              </div>
+              <div class="txt_field">
+                <input type="password" id="password" required>
+                <span></span>
+                <label>Password</label>
+              </div>
+
+              <input type="submit" class="btnLogin" value="Log In">
+              <div class="signup_link">
+                <a href="./registration-employer.html">Register</a>
+              </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="module" src="../scripts/login.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+}
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #e7e7e7;
+}
+/* * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #e7e7e7;
+} */
+
+.main-page {
+    height: 100vh;
+    width: 100%;
+}
+
+.login {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 320px;
+    width: 350px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.login h1 {
+    text-align: center;
+    color: black;
+    font-weight: lighter;
+    font-size: 1.5rem;
+}
+
+.form {
+    margin-top: 20px;
+}
+
+.txt_field {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.txt_field input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    width: 60%;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #1066c0;
+    /* You can change this color */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.signup_link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.signup_link a {
+    color: #1066c0;
+    text-decoration: none;
+}
+
+.signup_link a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Post a Job</title>
+    <link rel="stylesheet" href="./styles/postjob.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div class="main-page">
+
+        <!-- <nav>
+            <h2 class="logo">
+                <img src="../assets/CareerLink_Logo.png" alt="Company Logo" />
+                CareerLink
+            </h2>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./aboutus.html">About Us</a></li>
+                <li><a href="./testimonials.html">Testimonials</a></li>
+                <li><a href="./contactus.html">Contact Us</a></li>
+            </ul>
+        </nav> -->
+
+        <div class="top-navbar-container">
+            <div class="top-navbar">
+            </div>
+        </div>
+
+        <div class="side-nav-and-main-container">
+            <div class="side-navbar">
+            </div>
+
+            <div class="container">
+                <header>Post a Job</header>
+                <div class="form first">
+                    <div class="postJob">
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>Job Role</label>
+                                <input type="text" id="job-title" placeholder="Job Role" required>
+                            </div>
+                            <div class="input-field">
+                                <label>Job Type</label>
+                                <input type="text" id="job-type" placeholder="Job Type" required>
+                            </div>
+                            <div class="input-field">
+                                <label>Location</label>
+                                <input type="text" id="job-location" placeholder="Location" required>
+                            </div>
+                            <div class="input-field">
+                                <label>Minimum Salary</label>
+                                <input type="number" id="job-min-salary" placeholder="Min. Salary" required>
+                            </div>
+                            <div class="input-field">
+                                <label>Maximum Salary</label>
+                                <input type="number" id="job-max-salary" placeholder="Max. Salary" required>
+                            </div>
+                        </div>
+
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>Job Description</label>
+                                <textarea name="desciption" id="job-desciption" cols="50" rows="4"
+                                    placeholder="Job Description" required></textarea>
+                            </div>
+                            <div class="input-field">
+                                <label>Job Qualifications</label>
+                                <textarea name="qualifications" id="job-qualifications" cols="50" rows="4"
+                                    placeholder="Job Qualifications" required></textarea>
+                            </div>
+                            <div class="input-field">
+                                <label>Job Responsibilites</label>
+                                <textarea name="responsibilites" id="job-responsibilites" cols="50" rows="4"
+                                    placeholder="Job Responsibilites" required></textarea>
+                            </div>
+                        </div>
+
+                        <div class="btnContainer">
+                            <button class="postBtn">
+                                <span class="btnPostJob">Post Job</span>
+                            </button>
+                            <button class="cancelBtn">
+                                <span class="btnCancel">Cancel</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="../scripts/postjob.js"></script>
+</body>
+
+</html>

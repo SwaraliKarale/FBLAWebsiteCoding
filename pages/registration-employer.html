@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employer Registration</title>
+    <link rel="stylesheet" href="./styles/registration-employer.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,600,700">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div class="main-page">
+
+        <!-- <nav>
+            <h2 class="logo">
+                <img src="../assets/CareerLink_Logo.png" alt="Company Logo" />
+                CareerLink
+            </h2>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./aboutus.html">About Us</a></li>
+                <li><a href="./testimonials.html">Testimonials</a></li>
+                <li><a href="./contactus.html">Contact Us</a></li>                
+            </ul>
+        </nav> -->
+
+        <div class="top-navbar-container">
+            <div class="top-navbar">
+            </div>
+        </div>
+
+        <div class="side-nav-and-registration-container">
+            <div class="side-navbar">
+            </div>
+            <div class="container">
+                <header class="heading">Registration</header>
+                <!-- <form action="#"> -->
+                <div class="form first">
+                    <div class="aboutCompany">
+                        <!-- Additional Info  -->
+                        <span class="title">Company Info</span>
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>Company Name</label>
+                                <input type="text" id="company-name" placeholder="Name" required>
+                            </div>
+                            <div class="input-field">
+                                <label>Email</label>
+                                <input type="text" id="company-email" placeholder="Email Address" required>
+                            </div>
+                            <div class="input-field">
+                                <label>Phone Number</label>
+                                <input type="number" id="company-phone" placeholder="Phone Number" required>
+                            </div>
+                            <div class="input-field">
+                                <label>Registered Email</label>
+                                <input type="text" id="registered-email" placeholder="Registered Email" required>
+                            </div>
+
+                            <div class="input-field">
+                                <p>Upload Company Logo</p>
+                                <input type="file" id="companyLogo" class="inputFile" accept="image/*" />
+                                <input type="hidden" id="companyLogo" />
+                            </div>
+                        </div>
+
+
+
+                        <!-- Company Address Info  -->
+                        <span class="title">Address</span>
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>Street Address</label>
+                                <input type="text" id="company-address-street" placeholder="Street Address" required>
+                            </div>
+                            <div class="input-field">
+                                <label>City</label>
+                                <input type="text" id="company-address-city" placeholder="City" required>
+                            </div>
+                            <div class="input-field">
+                                <label>State</label>
+                                <input type="text" id="company-address-state" placeholder="State" required>
+                            </div>
+                            <div class="input-field">
+                                <label>Postal Code</label>
+                                <input type="text" id="company-address-postal" placeholder="Postal Code" required>
+                            </div>
+                        </div>
+
+
+                        <!-- About Company Info -->
+                        <span class="title">About Company</span>
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>Journey</label>
+                                <textarea name="compJourney" id="company-about-journey" cols="50" rows="4"
+                                    placeholder="Company Journey" required></textarea>
+                            </div>
+                            <div class="input-field">
+                                <label>Leadership</label>
+                                <textarea name="compLeadership" id="company-about-leadership" cols="50" rows="4"
+                                    placeholder="Company Leadership" required></textarea>
+                            </div>
+                            <div class="input-field">
+                                <label>Mission</label>
+                                <textarea name="compMission" id="company-about-mission" cols="50" rows="4"
+                                    placeholder="Company Mission" required></textarea>
+                            </div>
+                            <div class="input-field">
+                                <label>Values</label>
+                                <textarea name="compValues" id="company-about-values" cols="50" rows="4"
+                                    placeholder="Company Values" required></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Company Benefits Info -->
+                        <span class="title">Company Benefits</span>
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>Additional Perks</label>
+                                <textarea name="perks" id="company-benefits-perks" cols="50" rows="4"
+                                    placeholder="Additional Perks" required></textarea>
+                            </div>
+                            <div class="input-field">
+                                <label>Career Development</label>
+                                <textarea name="careerDev" id="company-benefits-careerdev" cols="50" rows="4"
+                                    placeholder="Career Development" required></textarea>
+                            </div>
+                            <div class="input-field">
+                                <label>Compensation</label>
+                                <textarea name="comp" id="company-benefits-compensation" cols="50" rows="4"
+                                    placeholder="Compensation" required></textarea>
+                            </div>
+                            <div class="input-field">
+                                <label>Healthcare</label>
+                                <textarea name="health" id="company-benefits-healthcare" cols="50" rows="4"
+                                    placeholder="Healthcare" required></textarea>
+                            </div>
+                            <div class="input-field">
+                                <label>Work Life Balance</label>
+                                <textarea name="workLife" id="company-benefits-worklife" cols="50" rows="4"
+                                    placeholder="Work Life Balance" required></textarea>
+                            </div>
+                        </div>
+
+
+                        <button class="registerBtn">
+                            <span class="btnEmployerRegistration">Register</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- </form> -->
+    </div>
+
+    <script type="module" src="../scripts/employerRegistration.js"></script>
+</body>
+
+</html>

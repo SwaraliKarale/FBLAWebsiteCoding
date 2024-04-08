@@ -1,0 +1,266 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+}
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #e7e7e7;
+}
+
+/* this is what makes that fourth line in the bars icon comes from,
+but this is the same code which adds the line under the tabs  */
+/* .navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: .3s;
+} */
+
+.horizontal-navbar a:hover::before {
+    width: 100%;
+}
+
+/* additional code for nav bar */
+.horizontal-navbar a.icon {
+    display: none;
+    margin-right: 30px;
+}
+
+.horizontal-navbar.responsive {
+    position: relative;
+    width: 150px;
+    top: 90px;
+    right: 0;
+    background-color: rgba(39, 89, 190, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 5px 10px 10px;
+}
+
+.horizontal-navbar.responsive a {
+    display: block;
+    text-align: left;
+    color: #fff;
+    margin: 10px 0;
+}
+
+.horizontal-navbar.responsive .icon {
+    margin-right: 30px;
+    position: absolute;
+    cursor: pointer;
+}
+
+
+.container {
+    position: relative;
+    max-width: 1000px;
+    width: 100%;
+    /* height: 425px; */
+    height: 50rem;
+    border-radius: 6px;
+    padding: 30px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    /* Enable vertical scrolling */
+}
+
+.heading {
+    font-size: 21px;
+    font-weight: 900;
+    color: #333;
+    margin-top: 40px;
+    margin-left: 150px;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1066c0;
+}
+
+.aboutCompany .fields {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    margin: 4px 0;
+    padding: 5px;
+}
+
+.input-field label {
+    font-size: 15px;
+    font-weight: 500;
+    color: #2e2e2e;
+    margin-bottom: 4px;
+}
+
+.input-field textarea {
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 8px 15px;
+    margin: 0;
+    height: 100%;
+    resize: vertical;
+}
+
+.input-field textarea:focus {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
+}
+
+.btnRegisterUser {
+    position: absolute;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    /* bottom: -285px; */
+    /* Adjust the distance from the bottom */
+    right: 30px;
+    /* Adjust the distance from the right */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    max-width: 100px;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 5px;
+    background-color: #1066c0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.btnRegisterUser .btnUserRegistration {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+@media screen and (min-width: 539px) and (max-width: 1024px) {
+    .heading {
+        font-size: 21px;
+        font-weight: 900;
+        color: #333;
+        margin-top: 40px;
+        margin-left: 30px;
+    }
+
+    .container {
+        position: relative;
+        max-width: 1000px;
+        width: 95%;
+        height: 800px;
+        border-radius: 6px;
+        padding: 30px;
+        margin: 20px auto;
+        background-color: #fff;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        overflow-y: auto;
+        /* Enable vertical scrolling */
+    }
+
+    .btnRegisterUser {
+        position: absolute;
+        bottom: 30px;
+        /* Adjust the distance from the bottom */
+        right: 30px;
+        /* Adjust the distance from the right */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 35px;
+        max-width: 100px;
+        width: 100%;
+        border: none;
+        outline: none;
+        color: #fff;
+        border-radius: 5px;
+        background-color: #1066c0;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .heading {
+        font-size: 19px;
+        font-weight: 900;
+        color: #333;
+        margin-top: 50px;
+        margin-left: 15px;
+    }
+
+    .container {
+        position: relative;
+        max-width: 1000px;
+        width: 95%;
+        height: 700px;
+        border-radius: 6px;
+        padding: 30px;
+        margin: 10px auto;
+        background-color: #fff;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        overflow-y: auto;
+        /* Enable vertical scrolling */
+    }
+
+    .input-field {
+        display: flex;
+        flex-direction: column;
+        margin: 4px 0;
+        padding: 5px;
+    }
+
+    .input-field label {
+        font-size: 15px;
+        font-weight: 500;
+        color: #2e2e2e;
+        margin-bottom: 10px;
+    }
+
+    .btnRegisterUser {
+        position: absolute;
+        bottom: -65px;
+        /* Adjust the distance from the bottom */
+        right: 20px;
+        /* Adjust the distance from the right */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 35px;
+        max-width: 100px;
+        width: 100%;
+        border: none;
+        outline: none;
+        color: #fff;
+        border-radius: 5px;
+        background-color: #1066c0;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Career Link - {company}</title>
+  <link rel="stylesheet" href="./styles/company-home.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+
+
+<body>
+  <div class="main-page">
+    <nav>
+      <h2 class="logo">
+        <img src="../assets/CareerLink_Logo.png" alt="Company Logo" />
+        CareerLink
+      </h2>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="./aboutus.html">About Us</a></li>
+        <li><a href="./testimonials.html">Testimonials</a></li>
+        <li><a href="./contactus.html">Contact Us</a></li>
+        <!-- add more if needed -->
+      </ul>
+
+      <!-- this will be the button to have EMPLOYERS log in -->
+      <button class="btnPostJob">Post a Job</button>
+      <button type="button" class="btnLogout">Log Out</button>
+    </nav>
+
+
+    <div class="company-header">
+      <!-- <h2 class="company-logo">
+        <img src="../assets/google_Logo.webp" alt="Company Logo" />
+      </h2>
+      <h2 class="company-name" id="company-name">Cornerstone Health</h2> -->
+    </div>
+
+    <div class="company-profile">
+      <div class="tab-titles">
+        <p class="tab-links active-link" onclick="opentab('about')">About Company</p>
+        <p class="tab-links" onclick="opentab('jobs')">Jobs & Applications</p>
+        <p class="tab-links" onclick="opentab('benefits')">Company Benefits</p>
+      </div>
+
+      <div class="tab-contents active-tab" id="about">
+      </div>
+
+      <div class="tab-contents" id="jobs">
+        <div class="jobs-view">
+          <div class="wrapper" id="jobslist">
+          </div>
+          <!--right section: list of applications for selected job-->
+          <div class="job-appl-list" id="jobApplicationDetailsContainer">
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-contents" id="benefits">
+      </div>
+
+      <button class="btnUpdateCompanyProfile">Update</button>
+    </div>
+  </div>
+
+  <script type="module" src="../scripts/company-home.js"></script>
+  <script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+      for (tablink of tablinks) {
+        tablink.classList.remove("active-link");
+      }
+
+      for (tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+    }
+
+  </script>
+
+</body>
+
+</html>

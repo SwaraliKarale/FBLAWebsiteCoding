@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Career Link | About Us</title>
+    <link rel="stylesheet" href="./styles/aboutus.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+    <div class="main-page">
+        <nav>
+            <h2 class="logo">
+                <img src="../assets/CareerLink_Logo.png" alt="Company Logo" />
+                CareerLink
+            </h2>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./aboutUs.html">About Us</a></li>
+                <li><a href="./testimonials.html">Testimonials</a></li>
+                <li><a href="./contact.html">Contact Us</a></li>
+                <!-- add more if needed -->
+            </ul>
+
+            <!-- this will be the button to have EMPLOYERS log in -->
+            <button type="button">Post a Job</button>
+        </nav>
+    </div>
+
+    <div class="about-us-section">
+        <h2>Connecting Opportunities, Empowering Careers</h2>
+        <br>
+        <p> Welcome to CareerLink, your gateway to a world of career possibilities. We are a dynamic platform designed
+            to seamlessly connect talented individuals with exciting job opportunities from leading companies. At
+            CareerLink, we empower applicants to explore and apply for diverse positions that match their skills and
+            aspirations, while providing employers with a streamlined platform to showcase and fill their job openings.
+        </p>
+        <br>
+
+        <h2>Our Vision</h2>
+        <br>
+        <p>At CareerLink, we envision a world where every individual finds a fulfilling and rewarding career path. We
+            strive to be the leading platform that empowers professionals to achieve their career goals and businesses
+            to build exceptional teams.</p>
+        <br>
+
+        <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('job-seekers')">For Job Seekers</p>
+            <p class="tab-links" onclick="opentab('employers')">For Employers</p>
+
+        </div>
+        <div class="tab-contents active-tab" id="job-seekers">
+            <p>
+                Discover your next career move with CareerLink. Browse through a diverse range of job openings from
+                companies across various industries. Our user-friendly interface makes it easy to search for positions
+                that align with your skills and aspirations. Apply seamlessly, track your applications, and embark on
+                your journey to a fulfilling career.<br>
+            </p>
+        </div>
+
+        <div class="tab-contents" id="employers">
+            <p>
+                Streamline your hiring process with CareerLink. Post job positions effortlessly, reaching a pool of
+                skilled and motivated candidates. Manage applications efficiently, and find the perfect fit for your
+                team. Our platform is designed to simplify the recruitment process, allowing you to focus on what
+                matters most – building a successful and dynamic workforce.
+            </p>
+        </div>
+        <br> <br>
+
+        <script>
+
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname) {
+                for (tablink of tablinks) {
+                    tablink.classList.remove("active-link");
+                }
+
+                for (tabcontent of tabcontents) {
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+
+        </script>
+
+        <h2>Our Values</h2>
+        <br>
+        <ul>
+            <strong>Excellence:</strong> We are committed to delivering high-quality services and fostering excellence
+            in every aspect of our platform.<br>
+            <strong>Collaboration:</strong> We believe in the power of collaboration and actively promote a supportive
+            and inclusive community.<br>
+            <strong>Innovation:</strong> Embracing innovation, we continuously evolve to meet the changing needs of the
+            job market.<br>
+            <!-- Add more values as needed -->
+        </ul>
+        <br><br>
+
+        <h2>Meet the Team</h2>
+        <p>Our dedicated team of professionals is passionate about connecting people with the right opportunities. The
+            founders of this company are Ritu Koshti and Swarali Karale, two students at North Creek High School. </p>
+        <!-- Include team member descriptions and images -->
+        <br>
+
+        <h2>Contact Us</h2>
+        <p>Have questions or want to learn more about CareerLink? Feel free to reach out to us through our <a
+                href="./contact.html">contact page</a>.</p>
+        <br>
+    </div>
+
+</body>
+
+</html>

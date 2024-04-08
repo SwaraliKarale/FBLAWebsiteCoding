@@ -1,0 +1,614 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+}
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #e7e7e7;
+}
+
+/* .header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8vh;
+    background-color: rgb(39, 89, 190);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+.logo {
+    display: flex;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    margin-top: 1.5rem;
+}
+
+.logo-image img {
+    max-height: 5rem;
+    max-width: 5rem;
+    padding: 0.5rem;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.navbar button {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.post-btn {
+    margin-right: 15px;
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #fefefe;
+    
+    color: black !important;
+    
+    text-decoration: none;
+    
+    font-size: 16px;
+    
+    border-radius: 5px;
+    
+} */
+
+/* this is what makes that fourth line in the bars icon comes from,
+but this is the same code which adds the line under the tabs  */
+/* .navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: .3s;
+} */
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+/* additional code for nav bar */
+.navbar a.icon {
+    display: none;
+    margin-right: 30px;
+}
+
+.navbar.responsive {
+    position: relative;
+    width: 150px;
+    top: 90px;
+    right: 0;
+    background-color: rgba(39, 89, 190, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 5px 10px 10px;
+}
+
+.navbar.responsive a {
+    display: block;
+    text-align: left;
+    color: #fff;
+    margin: 10px 0;
+}
+
+.navbar.responsive .icon {
+    margin-right: 30px;
+    position: absolute;
+    cursor: pointer;
+}
+
+/* ----------- */
+.side-nav-and-main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    /* height: 100%; */
+    /* background-color: pink; */
+}
+
+.side-navbar {
+    /* min-width: 3.5rem; */
+    /* min-width: 5%; */
+    float: left;
+    width: 5%;
+    /* max-width: 6%; */
+    /* background-color: fuchsia; */
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* height: 90vh; */
+    width: 100%;
+    /* background-color: lightyellow; */
+}
+
+.job-filters-full-screen {
+    display: flex;
+    justify-content: flex-start; /* Align items to the start */
+    align-items: center;
+    height: 3rem;
+    font-size: 1rem;
+    font-weight: 500;
+    /* margin-left: 1rem;
+    margin-top: 1rem;
+    margin-bottom: px;  */
+    /* Add margin at the bottom */
+    padding-left: 1rem;
+    padding-top: 6vh;
+    padding-bottom: 6vh;
+    /* padding: 0 10px; */
+     /* Add padding to the container */
+}
+
+.job-filters-small-screen {
+    display: none;
+}
+
+.job-filters-item {
+    margin-right: 20px; /* Add right margin to the text for spacing */
+}
+
+#filterList, #filterListJobType, #filterListLocation, #filterListTitle {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    width: 150px; /* Set a specific width or adjust as needed */
+}
+
+/* Optional: Style the dropdown arrow */
+#filterList, #filterListJobType, #filterListLocation, #filterListTitle::-ms-expand {
+    display: none;
+}
+
+#filterList:after, #filterListJobType:after, #filterListLocation:after, #filterListTitle:after {
+    content: '\25BC'; /* Unicode character for a downward-pointing arrow */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #555;
+}
+
+.job-list-and-details {
+    /* padding-top: 1rem; */
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+    height: 80vh;
+    /* background-color: lightskyblue; */
+}
+
+.joblist-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    gap: 0.75rem;
+    text-align: left;
+    min-width: 35%;
+    /* width: 40%; */
+    float: left;
+    overflow-y: auto;
+    /* Enable vertical scrolling for the job list */
+    height: 78vh;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    background-color: lightgray;
+}
+
+.card-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-left img {
+    max-height: 5rem;
+    max-width: 5rem;
+    padding: 0.5rem;
+}
+
+.card-center {
+    width: 60%;
+    padding: 4px;
+}
+
+.job-title {
+    margin-bottom: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.job-company-name {
+    font-size: 0.9rem;
+    margin-bottom: 0.1rem;
+}
+
+.job-location {
+    font-size: 0.8rem;
+    font-weight: lighter;
+    margin-bottom: 0.1rem;
+}
+
+.job-salary {
+    font-size: 0.75rem;
+}
+
+.card-right {
+    width: 40%;
+    font-size: 0.8rem;
+    padding: 2px;
+    margin-left: 5px;
+}
+
+.date-posted {
+    margin: 0.4rem;
+    margin-bottom: 0.2rem;
+}
+
+.job-type {
+    margin: 0.4rem;
+    margin-bottom: 0.2rem;
+}
+
+.num-appl {
+    margin: 0.4rem;
+    margin-bottom: 0.2rem;
+    color: forestgreen;
+}
+
+.job-details-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    width: 100%;
+    text-align: center;
+    height: 80vh;
+    /* display: none; */
+}
+
+.job-details {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+    margin-left: 1rem;
+    /* margin-right: 1rem; */
+    text-align: left;
+    overflow-y: auto;
+}
+
+.job-detail-header {
+    display: flex;
+    flex-direction: row;
+    max-height: 5rem;
+    /* max-width: 100%; */
+    width: 100%;
+}
+
+.job-detail-header-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.job-detail-header-left img {
+    max-height: 5rem;
+    max-width: 5rem;
+    padding: 0.5rem;
+}
+
+.job-detail-header-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: 1;
+    margin: 1rem;
+    font-weight: 500;
+}
+
+.job-detail-header-right1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.job-detail-header-right2 {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.job-actions {
+    padding: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    max-height: 5rem;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    /* margin: 20px 0 40px;
+    padding-left: 30%; */
+}
+
+.tab {
+    /* margin-right: 50px; */
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    font-weight: bold;
+}
+
+.tab::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background:#1066c0;
+    position: absolute;
+    left: 0;
+    bottom:-8px;
+}
+
+.tab.active::after {
+    width: 100%;
+
+}
+
+.panel {
+    display: none;
+}
+
+.panel.active {
+    display: block;
+}
+
+
+.btn-apply, .btn-save {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 8px 15px;
+    background-color: rgb(39, 89, 190); /* Blue background color */
+    color: #ffffff; /* White text color */
+    text-decoration: none;
+    font-size: 16px;
+    border: 2px solid rgb(39, 89, 190); /* Border color */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Add a smooth transition effect */
+}
+
+.btn-apply:hover, .btn-save:hover {
+    background-color: #0056b3; /* Darker blue background color on hover */
+    color: #ffffff; /* White text color on hover */
+}
+
+
+.btn-close {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+/* additional code for making job details responsive  */
+/* Style for the modal */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Style for the modal content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    /* 10% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    /* Adjust the width as needed */
+    max-width: 1200px;
+    /* Set a maximum width if desired */
+    height: 90%;
+    overflow-y: auto;
+    /* Enable vertical scrolling if needed */
+}
+
+/* Close button styles */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* RESPONSIVE CODE fOR NAV BAR */
+
+@media (min-width: 320px) and (max-width: 875px) {
+    .navbar a {
+        display: none;
+    }
+
+    .navbar a.icon {
+        float: right;
+        display: block;
+    }
+
+    .navbar.responsive {
+        position: relative;
+    }
+
+    .navbar.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .navbar.responsive a {
+        display: block;
+        text-align: left;
+    }
+
+    .navbar.responsive a::before {
+        content: none;
+    }
+
+    .job-filters-full-screen {
+        display: none;
+    }
+
+    .job-filters-small-screen {
+        display: flex;
+        justify-content: flex-start; /* Align items to the start */
+        align-items: center;
+        height: 3rem;
+        font-size: 1rem;
+        font-weight: 500;
+        /* margin-left: 1rem;
+        margin-top: 1rem;
+        margin-bottom: px;  */
+        /* Add margin at the bottom */
+        padding-left: 1rem;
+        padding-top: 6vh;
+        padding-bottom: 6vh;
+        /* padding: 0 10px; */
+         /* Add padding to the container */
+    }
+    
+    .job-filters-full-screen {
+        display: none;
+    }
+    
+    .job-filters-item {
+        margin-right: 20px; /* Add right margin to the text for spacing */
+    }
+
+    .job-details-panel {
+        display: none;
+    }
+
+    .modal {
+        display: block;
+    }
+
+    .joblist-wrapper {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .job-detail-header-left img {
+        max-height: 4rem;
+        max-width: 4rem;
+        padding: 0.3rem;
+    }
+
+    .job-detail-header-right {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-grow: 1;
+        margin: 1rem;
+        font-weight: 500;
+        font-size: 15px;
+    }
+}
+
+/* .tabs {
+    display: flex;
+    justify-content: space-between;
+    background-color: teal;
+    width: 100%;
+} */
+
+.appl-card {
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 5px;
+    padding: 0.3rem;
+    background-color: #f8f9fa; */
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+    justify-content: space-between;
+    padding: 0.3rem;
+    background-color: #f8f9fa;
+    margin-bottom: 0.5rem;
+}
+
+.appl-name {
+    font-size: 14px;
+}
+.appl-location {
+    font-size: 12px;
+}
+
+.appl-resume {
+    
+    line-height: 2;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}

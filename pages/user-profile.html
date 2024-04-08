@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="./styles/registration-user.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,600,700">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+
+    <script type="module" src="../scripts/userRegistration.js"></script>
+
+</head>
+
+<body>
+    <div>
+
+        <div class="top-navbar-container">
+            <div class="top-navbar">
+            </div>
+        </div>
+        <div class="side-nav-and-main-container">
+            <div class="side-navbar">
+            </div>
+        </div>
+
+        <!-- <header class="header"> -->
+
+        <!-- <a href="index.html" class="logo">
+                <div class="logo-image">
+                    <img src="../assets/CareerLink_Logo.png" alt="Company Logo" />
+                </div>
+                <div class="logo-text">
+                    <p>CareerLink</p>
+                </div>
+            </a>
+
+            <nav id="horizontal-navbar" class="horizontal-navbar">
+                <a href="../index.html">Home</a>
+                <a href="appliedJobs.html">Applied Jobs</a>
+                <a href="#">Testimonials</a>
+                <a href="userRegistration.html">User Registration</a>
+                <a href="#">About Us</a>
+                <a href="#">Contact Us</a>
+                <a class="post-btn" href="#">Post a job</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </nav> -->
+
+        <!-- <div id="vertical-navbar" class="vertical-navbar">
+                <ul class="nav-list">
+                    <li>
+                        <a href="#">
+                            <span class="icon">
+                                <i class="fas fa-briefcase"></i>
+                            </span>
+                            <span class="text">
+                                Jobs
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon">
+                                <i class="fas fa-bookmark"></i>
+                            </span>
+                            <span class="text">
+                                Saved Jobs
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon">
+                                <i class="fas fa-search"></i>
+                            </span>
+                            <span class="text">
+                                Saved Searches
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon">
+                                <i class="fas fa-check"></i>
+                            </span>
+                            <span class="text">
+                                Applied Jobs
+                            </span>
+                        </a>
+                    </li>
+                    <li class="profile-icon">
+                        <a href="#">
+                            <span class="icon">
+                                <i class="fas fa-user"></i>
+                            </span>
+                            <span class="text">
+                                Profile
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div> -->
+
+
+        <!-- <div id="mobile-navbar" class="mobile-navbar">
+                <ul class="mobile-nav-list">
+                    <li>
+                        <a href="#" class="icon">
+                            <i class="fas fa-bookmark"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="icon">
+                            <i class="fas fa-search"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="icon">
+                            <i class="fas fa-briefcase"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="icon">
+                            <i class="fas fa-check"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="icon">
+                            <i class="fas fa-user"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div> -->
+        <!-- </header> -->
+
+        <header class="heading">User Registration</header>
+        <div class="container">
+            <!-- <header>User Registration</header> -->
+            <!-- <form action="#"> -->
+            <!-- <div class="form first">
+                <div class="userProfile"> -->
+            <!-- Additional Info  -->
+            <span class="title">User Profile</span>
+            <div class="fields">
+                <div class="input-field">
+                    <label>Email</label>
+                    <input type="text" id="user-email" placeholder="Email Address" required>
+                </div>
+
+                <div class="input-field">
+                    <label>Password</label>
+                    <input type="text" id="user-password" placeholder="Password" required>
+                </div>
+
+                <div class="input-field">
+                    <label>First Name</label>
+                    <input type="text" id="user-first-name" placeholder="First Name" required>
+                </div>
+                <div class="input-field">
+                    <label>Last Name</label>
+                    <input type="text" id="user-last-name" placeholder="Last Name" required>
+                </div>
+
+                <div class="input-field">
+                    <label>Phone Number</label>
+                    <input type="number" id="user-phone" placeholder="Phone Number" required>
+                </div>
+
+                <span class="title">Address</span>
+                <div class="fields">
+                    <div class="input-field">
+                        <label>City</label>
+                        <input type="text" id="user-address-city" placeholder="City" required>
+                    </div>
+                    <div class="input-field">
+                        <label>State</label>
+                        <input type="text" id="user-address-state" placeholder="State" required>
+                    </div>
+                    <div class="input-field">
+                        <label>Postal Code</label>
+                        <input type="text" id="user-address-postal" placeholder="Postal Code" required>
+                    </div>
+                </div>
+
+                <div class="input-field">
+                    <label>Profile Summary</label>
+                    <textarea name="profileSummary" id="user-profile-summary" cols="50" rows="4"
+                        placeholder="Profile Summary" required></textarea>
+                </div>
+
+                <div class="form-control">
+                    <p>Upload Your Resume</p>
+                    <input type="file" class="inputFile" accept=".pdf" />
+                    <input type="hidden" id="resumeUrl" />
+                </div>
+
+            </div>
+
+            <button class="btnRegisterUser">
+                <span class="btnUserRegistration">Register</span>
+            </button>
+            <!-- </div>
+            </div> -->
+
+        </div>
+    </div>
+</body>
+
+</html>

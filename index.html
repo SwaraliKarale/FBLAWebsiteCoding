@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="./pages/styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,600,700">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+
+    <script type="module" src="./scripts/index.js"></script>
+
+    <!-- Move the myFunction definition here -->
+    <script>
+        function myFunction() {
+            var x = document.getElementById("navbar");
+            console.log("Before toggle - class:", x.className);
+
+            x.classList.toggle("responsive");
+
+            console.log("After toggle - class:", x.className);
+        }
+
+        // Add this function to your script
+        function closeModal() {
+            var modal = document.getElementById("jobDetailsModal");
+            modal.style.display = "none";
+        }
+
+        // Add this function to open the modal
+        function openModal() {
+            var modal = document.getElementById("jobDetailsModal");
+            modal.style.display = "block";
+        }
+    </script>
+
+</head>
+
+<body>
+    <div>
+
+        <div class="top-navbar-container">
+            <div class="top-navbar">
+            </div>
+        </div>
+
+        <div class="side-nav-and-main-container">
+            <div class="side-navbar">
+            </div>
+            <div class="main-container" id="main-container">
+
+                <div class="job-filters-full-screen">
+                    <div class="job-filters-item">
+                        <p>Company</p>
+                        <select id="filterList"></select>
+                    </div>
+                    <div class="job-filters-item">
+                        <p>Job Type</p>
+                        <select id="filterListJobType">
+                            <option value="Any">All</option>
+                            <option value="Full Time">Full Time</option>
+                            <option value="Part Time">Part Time</option>
+                            <option value="Contract">Contract</option>
+                            <option value="Intern">Intern</option>
+                        </select>
+                    </div>
+                    <div class="job-filters-item">
+                        <p>Location</p>
+                        <input type="text" id="filterListLocation" placeholder="Search by Location">
+                    </div>
+                    <div class="job-filters-item">
+                        <p>Title</p>
+                        <input type="text" id="filterListTitle" placeholder="Title Keyword">
+                    </div>
+                </div>
+
+                <div class="job-filters-small-screen">
+                    <div>
+                        <div class="job-filters-item">
+                            <p>Company</p>
+                            <select id="filterList"></select>
+                        </div>
+                        <div class="job-filters-item">
+                            <p>Job Type</p>
+                            <select id="filterListJobType">
+                                <option value="Any">All</option>
+                                <option value="Full Time">Full Time</option>
+                                <option value="Part Time">Part Time</option>
+                                <option value="Contract">Contract</option>
+                                <option value="Intern">Intern</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="job-filters-item">
+                            <p>Location</p>
+                            <input type="text" id="filterListLocation" placeholder="Search by Location">
+                        </div>
+                        <div class="job-filters-item">
+                            <p>Title</p>
+                            <input type="text" id="filterListTitle" placeholder="Title Keyword">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="job-list-and-details">
+
+                    <div class="joblist-wrapper" id="jobslist">
+                    </div>
+
+                    <div class="job-details-panel" id="jobDetailsContainer">
+                        <div class="job-details" id="jobDetails">
+                            <div class="job-detail-header" id="job-detail-header"></div>
+                            <hr class="divider">
+                            <div class="detail-desc" id="detail-desc">
+                                <div class="tabs">
+                                    <div class="tab active" data-target="job-details-large">Job Details</div>
+                                    <div class="tab" data-target="about-company-large">About Company</div>
+                                    <div class="tab" data-target="company-benefits-large">Company Benefits</div>
+                                </div>
+                                <div class="panels-large" id="panels-large">
+                                    <div class="job-details-large panel active" id="job-details-tab-large">
+                                    </div>
+                                    <div class="about-company-large panel" id="about-company-tab-large">
+                                    </div>
+                                    <div class="company-benefits-large panel" id="company-benefits-tab-large">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="job-applications"></div>
+                        </div>
+                        <div class="job-actions">
+                            <button id="applyButton" class="btn-apply">Apply Now</button>
+                            <button id="saveButton" class="btn-save">Save Job</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- this div for the modal -->
+    <div id="jobDetailsModal" class="modal">
+        <div class="modal-content">
+            <!-- Job details content here -->
+            <span class="close" onclick="closeModal()">&times;</span>
+            <!-- <div id="jobDetailsContent"> -->
+            <div class="job-details" id="jobDetails">
+                <div class="job-detail-header" id="job-detail-header-small">THIS IS HEADER</div>
+                <hr class="divider">
+                <div class="detail-desc" id="detail-desc">
+                    <div class="tabs">
+                        <div class="tab active" data-target="job-details-small">Job Details</div>
+                        <div class="tab" data-target="about-company-small">About Company</div>
+                        <div class="tab" data-target="company-benefits-small">Company Benefits</div>
+                    </div>
+                    <div class="panels-small" id="panels-small">
+                        <div class="job-details-small panel active" id="job-details-tab-small">
+                        </div>
+                        <div class="about-company-small panel" id="about-company-tab-small">
+                        </div>
+                        <div class="company-benefits-small panel" id="company-benefits-tab-small">
+                        </div>
+                    </div>
+                </div>
+                <div id="job-applications"></div>
+            </div>
+            <div class="job-actions">
+                <button id="applyButton" class="btn-apply">Apply Now</button>
+                <button id="saveButton" class="btn-save">Save Job</button>
+            </div>
+        </div>
+    </div>    
+</body>
+
+</html>

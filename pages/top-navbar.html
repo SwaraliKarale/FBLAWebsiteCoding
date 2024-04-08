@@ -1,0 +1,153 @@
+<div>
+    <header class="header">
+        <a href="index.html" class="logo">
+            <div class="logo-image">
+                <img src="../assets/CareerLink_Logo.png" alt="Company Logo" />
+            </div>
+            <div class="logo-text">
+                <p>CareerLink</p>
+            </div>
+        </a>
+
+        <nav id="navbar" class="navbar">
+            <a href="/index.html">Home</a>
+            <a href="#" id="testimonials">Testimonials</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+            <a class="login-btn" id="login-btn">Login</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+    </header>
+</div>
+<script>
+
+    const loginButton = document.getElementById("login-btn");
+    var userLoggedIn = false;
+    onAuthStateChanged(auth, async (user) => {
+        if (user) {
+            //console.log("Top Navbar - Auth state changed. User logged in - " + user.email);
+            loginButton.textContent = 'Logout';
+            userLoggedIn = true;
+        } else {
+            //console.log("Top Navbar - Auth state changed, no user logged in.");
+            loginButton.textContent = 'Login';
+            userLoggedIn = false;
+
+        }
+    });
+
+    const testimonials = document.getElementById("testimonials");
+    testimonials.addEventListener("click", (e) => {
+        console.log("Testimonials");
+        window.location.href = '../index.html?testimonials';
+    });
+
+    loginButton.addEventListener("click", (e) => {
+        if (userLoggedIn) {
+            window.location.href = '../index.html?logout';
+        } else {
+            window.location.href = '/pages/login-employer.html';
+        }
+    })
+
+
+</script>
+<style>
+    .header {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 8vh;
+        background-color: rgb(39, 89, 190);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1;
+    }
+
+    .logo {
+        display: flex;
+    }
+
+    .logo-text {
+        font-size: 1.5rem;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 700;
+        margin-top: 1.5rem;
+    }
+
+    .logo-image img {
+        max-height: 5rem;
+        max-width: 5rem;
+        padding: 0.5rem;
+    }
+
+    .navbar a {
+        position: relative;
+        font-size: 1rem;
+        color: #fff;
+        font-weight: 500;
+        text-decoration: none;
+        margin-left: 40px;
+    }
+
+    .navbar button {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .post-btn,
+    .login-btn {
+        margin-right: 15px;
+        display: inline-block;
+        padding: 10px 15px;
+        background-color: #fefefe;
+        /* Green background color */
+        color: black !important;
+        /* White text color */
+        text-decoration: none;
+        /* Remove underline */
+        font-size: 16px;
+        /* Set font size */
+        border-radius: 5px;
+        /* Optional: Add rounded corners */
+    }
+
+    .navbar a:hover::before {
+        width: 100%;
+    }
+
+    /* additional code for nav bar */
+    .navbar a.icon {
+        display: none;
+        margin-right: 30px;
+    }
+
+    .navbar.responsive {
+        position: relative;
+        width: 150px;
+        top: 90px;
+        right: 0;
+        background-color: rgba(39, 89, 190, 0.8);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 5px 10px 10px;
+    }
+
+    .navbar.responsive a {
+        display: block;
+        text-align: left;
+        color: #fff;
+        margin: 10px 0;
+    }
+
+    .navbar.responsive .icon {
+        margin-right: 30px;
+        position: absolute;
+        cursor: pointer;
+    }
+</style>

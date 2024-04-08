@@ -1,0 +1,286 @@
+<div id="vertical-navbar" class="vertical-navbar">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <ul class="nav-list">
+        <!-- need to change the icons of vertical nav bar -->
+        <div class="top-nav-list">
+            <li>
+                <a href="#">
+                    <span class="icon">
+                        <i class="fas fa-user"></i>
+                    </span>
+                    <span class="text">Craig</span>
+                </a>
+            </li>
+            <hr class="divider">
+            <li id="nav-list-jobs">
+                <a href="/index.html">
+                    <span class="icon">
+                        <i class="fas fa-briefcase"></i>
+                    </span>
+                    <span class="text">Jobs</span>
+                </a>
+            </li>
+            <li id="nav-list-saved-jobs">
+                <a href="/index.html?savedJobs">
+                    <span class="icon">
+                        <i class="fas fa-bookmark"></i>
+                    </span>
+                    <span class="text">Saved Jobs</span>
+                </a>
+            </li>
+            <li id="nav-list-applied-jobs">
+                <a href="/index.html?appliedJobs">
+                    <span class="icon">
+                        <i class="fas fa-check"></i>
+                    </span>
+                    <span class="text">Applied Jobs</span>
+                </a>
+            </li>
+        </div>
+        <div class="bottom-nav-list">
+            <li id="nav-list-profile">
+                <a href="/pages/user-profile.html?update">
+                    <span class="icon">
+                        <i class="fas fa-cog"></i>
+                    </span>
+                    <span class="text">Profile</span>
+                </a>
+            </li>
+            <li id="nav-list-logout">
+                <a href="/index.html?logout">
+                    <span class="icon">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </span>
+                    <span class="text">Log Out</span>
+                </a>
+            </li>
+        </div>
+    </ul>
+</div>
+
+<div id="mobile-navbar" class="mobile-navbar">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+        <ul class="mobile-nav-list">
+            <li id="nav-list-jobs">
+                <a href="/index.html">
+                    <span class="icon">
+                        <i class="fas fa-briefcase"></i>
+                    </span>
+                    <!-- <span class="text">Jobs</span> -->
+                </a>
+            </li>
+            <li id="nav-list-saved-jobs">
+                <a href="/index.html?savedJobs">
+                    <span class="icon">
+                        <i class="fas fa-bookmark"></i>
+                    </span>
+                    <!-- <span class="text">Saved Jobs</span> -->
+                </a>
+            </li>
+            <li id="nav-list-applied-jobs">
+                <a href="/index.html?appliedJobs">
+                    <span class="icon">
+                        <i class="fas fa-check"></i>
+                    </span>
+                    <!-- <span class="text">Applied Jobs</span> -->
+                </a>
+            </li>
+            <li id="nav-list-profile">
+                <a href="/pages/user-profile.html?update">
+                    <span class="icon">
+                        <i class="fas fa-cog"></i>
+                    </span>
+                    <!-- <span class="text">Profile</span> -->
+                </a>
+            </li>
+            <li id="nav-list-logout">
+                <a href="/index.html?logout">
+                    <span class="icon">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </span>
+                    <!-- <span class="text">Log Out</span> -->
+                </a>
+            </li>
+        </ul>
+</div>
+
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Montserrat, sans-serif;
+    }
+
+    body,
+    html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: #e7e7e7;
+    }
+
+
+
+    .vertical-navbar {
+        display: flex;
+        position: absolute;
+        width: 60px;
+        top: 10vh;
+
+        /* height: calc(95% - 8vh); */
+        background: rgb(39, 89, 190);
+        overflow: hidden;
+        transition: 0.5s;
+        /* border-radius: 8px; */
+        border-top-right-radius: 12px;
+        border-bottom-right-radius: 12px;
+        z-index: 1;
+    }
+
+    .vertical-navbar:hover {
+        width: 200px;
+        z-index: 2;
+    }
+
+    .nav-list {
+        margin-top: 0px;
+        /* display: flex;
+    flex-direction: column;
+    flex-grow: 1;  
+    justify-content: space-around; */
+        /* display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;   */
+        /* position: fixed; */
+
+    }
+
+    /* .top-nav-list {
+} */
+
+    .bottom-nav-list {
+        display: flex;
+        flex-direction: column;
+        bottom: 0px;
+    }
+
+    .nav-list li {
+        list-style: none;
+    }
+
+    .nav-list li:hover {
+        background: rgba(83, 83, 83, .2);
+    }
+
+    .nav-list a {
+        position: relative;
+        display: flex;
+        white-space: nowrap;
+        text-decoration: none;
+    }
+
+    .nav-list li a .icon {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 60px;
+        height: 60px;
+        font-size: 1rem;
+        color: white;
+    }
+
+    .nav-list li a .text {
+        position: relative;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        font-size: 0.75em;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .mobile-navbar {
+        display: none;
+    }
+
+    @media screen and (max-width: 768px) {
+    .vertical-navbar {
+        display: none;
+    }
+
+    .mobile-navbar {
+        display: flex;
+        background: #F1F1F1;
+        position: fixed;
+        bottom: 0;
+        height: 65px;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .mobile-nav-list {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .mobile-nav-list li {
+        width: 30%;
+        /* Adjust the width as needed */
+    }
+
+    .mobile-nav-list a {
+        text-decoration: none;
+        color: rgba(63, 63, 63);
+        font-size: 1.25rem;
+        margin: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+        
+    }
+
+</style>
+<script>
+    
+    // const jobs = document.getElementById("nav-list-jobs");
+    // jobs.addEventListener("click", (e) => {
+    //     console.log("Selected jobs");
+    //     window.location.href = '../index.html';
+    // });
+
+    // const savedJobs = document.getElementById("nav-list-saved-jobs");
+    // savedJobs.addEventListener("click", (e) => {
+    //     console.log("Selected saved jobs");
+    //     window.location.href = '../index.html?savedJobs';
+    // });
+
+    // const appliedJobs = document.getElementById("nav-list-applied-jobs");
+    // appliedJobs.addEventListener("click", (e) => {
+    //     console.log("Selected applied jobs");
+    //     window.location.href = '../index.html?appliedJobs';
+    // });
+
+    // const profile = document.getElementById("nav-list-profile");
+    // profile.addEventListener("click", (e) => {
+    //     console.log("Selected profile");
+    //     window.location.href = '../pages/user-profile.html?update';
+    // });
+
+    // const logout = document.getElementById("nav-list-logout");
+    // logout.addEventListener("click", (e) => {
+    //     console.log("Selected logout");
+    //     window.location.href = '../index.html?logout';
+    // });
+</script>

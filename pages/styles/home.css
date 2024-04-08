@@ -1,0 +1,633 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+
+.main-page {
+    height: 25vh;
+    width: 100%;
+}
+
+
+
+
+.background-image {
+    width: 100%;
+    height: 130%;
+    object-fit: cover;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .background-image {
+        height: 40vh;
+    }
+
+
+}
+
+
+.content-overlay {
+    position: absolute;
+    top: 15%; /* Adjust this value to move the content down */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15%;
+    box-sizing: border-box;
+}
+
+
+.column {
+    width: 45%;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.column h3 {
+    font-size: 2rem;
+    margin-bottom: 10px; /* Adjust the spacing between heading and paragraph */
+}
+
+
+.column p {
+    font-size: 1.5rem; /* Updated font size */
+    margin-bottom: 20px;
+}
+
+
+.column-button {
+    padding: 10px 20px;
+    background-color: #1066c0;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    align-self: center; /* Center the button horizontally */
+    transition: background-color 0.3s ease; /* Add smooth transition effect */
+}
+
+
+.column-button:hover {
+    background-color: #0e5496; /* Darker color when hovered over */
+}
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8vh;
+    background-color: rgb(39, 89, 190);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+
+.logo {
+    display: flex;
+}
+
+
+.logo-text {
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    margin-top: 1.5rem;
+}
+
+
+.logo-image img {
+    max-height: 5rem;
+    max-width: 5rem;
+    padding: 0.5rem;
+}
+
+
+.navbar a {
+    position: relative;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px; /* Adjust this value based on your current spacing */
+}
+
+
+.navbar a:last-child {
+    margin-right: 20px; /* Adjust this value based on the space you want to add */
+}
+
+
+.navbar button {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: .3s;
+}
+
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+
+.about-us-section {
+    position: relative; /* Add relative positioning to the section */
+    padding-top: 20vh; /* Adjust this value based on your design */
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+    padding-left: 30%;
+}
+
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    font-weight: bold;
+}
+
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background:#1066c0;
+    position: absolute;
+    left: 0;
+    bottom:-8px;
+    transition: 0.5s;
+}
+
+
+.tab-links.active-link::after {
+    width: 50%;
+}
+
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+    padding-left: 20%;
+}
+
+
+.tab-contents ul li span {
+    color: #1066c0;
+    font-size: 20px;
+}
+
+
+.tab-contents {
+    display: none;
+}
+
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+
+.wrapper {
+    position: relative;
+    height: 60vh; /* Adjust this value based on design */
+}
+
+
+.testimonials-header {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: black;
+}
+
+
+.border {
+    width: 160px;
+    height: 5px;
+    background: #1066c0;
+    margin: auto;
+    margin-bottom: 1%;
+}
+
+
+.row {
+    margin-top: 5rem;
+    display: flex;
+}
+
+
+.col {
+    flex: 1;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-top: 0px;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+
+.col:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+.name {
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+
+
+.carousel-item .contact {
+    font-size: 1rem;
+    position: relative;
+    text-align: center; /* Center-align the text */
+    margin: auto; /* Center horizontally */
+    max-width: 100%; /* Set a maximum width if needed */
+    max-height: 100%;
+    padding: 30px; /* Add padding for better spacing */
+    box-sizing: border-box;
+}
+
+
+.carousel-item {
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: #CAEAFF; /* Set the background color for testimonial box */
+    border-radius: 10px; /* Optional: Add border-radius for rounded corners */
+    padding: 30px; /* Optional: Add padding for better spacing */
+    margin: 30px; /* Optional: Add margin for better spacing */
+    box-sizing: border-box; /* Optional: Include padding and border in the box's total width and height */
+    position: relative; /* Position relative for absolute positioning of controls */
+    transition: box-shadow 0.3s ease; /* Add transition for smooth effect */
+}
+
+
+.carousel-item:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; /* Apply box shadow on hover */
+}
+
+
+.stars {
+    color: #1066c0;
+    margin-bottom: 20px;
+}
+
+
+.contact-us-section {
+    text-align: center;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+
+.row {
+    margin-top: 2rem;
+    display: flex;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+
+.col {
+    flex: 1;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 30px;
+    margin-top: 0px;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+
+.iframe {
+    text-align: center; /* Center the content horizontally */
+    margin-top: 2rem; /* Adjust the top margin as needed */
+}
+
+
+iframe {
+    width: 1240px;
+    height: 450px;
+}
+
+
+.iframe iframe {
+    display: inline-block; /* Ensure the iframe is treated as an inline block */
+}
+
+
+.carousel-item {
+    transition: opacity 0.8s ease; /* Adjust the timing and easing function as needed */
+}
+
+
+.carousel-item, .col {
+    max-width: 1000px; /* Adjust the maximum width as needed */
+    margin: auto; /* Center the content horizontally */
+    padding: 30px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    position: relative;
+}
+
+
+.col {
+    background-color: #CAEAFF;
+}
+
+
+.carousel-control-prev,
+.carousel-control-next {
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    color: rgb(39, 89, 190);
+    position: absolute;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+
+.carousel-control-prev {
+    transform: translate(10px, -50%);
+}
+
+
+.carousel-control-next {
+    transform: translate(-10px, -50%);
+}
+
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    color: #1f1e5a; /* Set light mode hover color */
+}
+
+
+.section-divider {
+    width: 60%;
+    height: 2px; /* Adjust the thickness of the line */
+    background-color: #1066c0; /* Adjust the color of the line */
+    margin: 10px auto; /* Center the line horizontally and adjust the spacing above and below */
+}
+
+
+a {
+    text-decoration: none;
+}
+
+
+.footer {
+    width: 100%;
+    background-color: rgb(39, 89, 190);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+
+
+
+.chart-container .row {
+    display: flex;
+}
+
+
+.chart-container .col:first-child {
+    margin-right: 15px; /* Adjust the spacing between charts */
+}
+
+
+.chart-container .col {
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: 30px;
+    margin: 30px;
+    margin-top: 0px;
+    box-sizing: border-box;
+    background: #CAEAFF;
+    display: flex;
+    flex-direction: column; /* Add this to make the columns stack vertically */
+    align-items: center; /* Center the content horizontally */
+    justify-content: center; /* Center the content vertically */
+}
+
+
+.chart-container .col canvas,
+.chart-container .col #googleChart {
+    max-width: 100%; /* Make sure the chart canvas does not overflow */
+    max-height: 100%;
+}
+
+
+.row .col {
+    margin-right: 50px; /* Adjust the value to control the space */
+}
+
+
+.row .col:last-child {
+    margin-right: 0;
+}
+
+
+.dark-mode {
+    background-color: #333; /* Dark background color */
+    color: #fff; /* Light text color */
+}
+
+
+.dark-mode .stars {
+    color: #fff; /* Set stars color to white */
+}
+
+
+.dark-mode .section-divider {
+    background-color: #fff; /* Set line color to white */
+}
+
+
+.dark-mode .testimonials-header {
+    color: #fff; /* Set text color to white */
+}
+
+
+.dark-mode .carousel-control-prev,
+.dark-mode .carousel-control-next {
+    color: #fff; /* Set arrow color to white */
+}
+
+
+.dark-mode .carousel-control-prev:hover,
+.dark-mode .carousel-control-next:hover {
+    color: #ccc; /* Set dark mode hover color */
+}
+
+
+#darkModeToggle {
+    color: white;
+    background: transparent !important;
+    border: none !important;
+}
+
+
+.col h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+
+.roles {
+    margin-bottom: 5%;
+}
+
+
+.faqs {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+.expand-btn {
+    position: relative;
+    background-color: #CAEAFF;
+    color: #000;
+    padding: 10px;
+    border-top: 1px solid rgb(39, 89, 190);
+    border-bottom: 1px solid rgb(39, 89, 190);
+    border-left: none;
+    border-right: none;
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.expand-btn:hover {
+    background-color: #AADCF7;
+
+
+}
+
+
+.text {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease; /* Adjusted transition duration */
+    padding: 0 10px;
+}
+
+
+.text.show {
+    max-height: 2000px;
+    padding: 10px;
+}
+
+
+.material-icons {
+    vertical-align: middle; /* Align icon vertically in the middle */
+}
+
+
+.faqs h1 {
+    text-align: center;
+}
+
+
+.dark-mode .expand-btn {
+    background-color: #333; /* Dark background color */
+    color: #fff; /* Light text color */
+    border-top: 1px solid #fff; /* White border */
+    border-bottom: 1px solid #fff; /* White border */
+    border-left: none; /* White border */
+    border-right: none; /* White border */
+
+
+    background-color: #2859bf;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Add transition effect */
+}
+
+
+.dark-mode .expand-btn:hover {
+    background-color: #204aaf; /* Darker background color on hover */
+    color: #fff; /* Light text color on hover */
+}
+
+
+.values{
+    margin-top: 5%;
+    text-align: center;
+}
+
+
+.tab-contents {
+    text-align: center;
+}
+
+
+.dark-mode .tab-links::after {
+    background: #fff; /* Set the line color to white */
+}
+
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+    padding-left: 20%; /* Adjust the left padding as needed */
+}
+
+
+

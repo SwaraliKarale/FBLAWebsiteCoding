@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employer Registration</title>
+    <link rel="stylesheet" href="./styles/registration-employer.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div class="main-page">
+
+        <nav>
+            <h2 class="logo">
+                <img src="../assets/CareerLink_Logo.png" alt="Company Logo" />
+                CareerLink
+            </h2>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./aboutus.html">About Us</a></li>
+                <li><a href="./testimonials.html">Testimonials</a></li>
+                <li><a href="./contactus.html">Contact Us</a></li>
+                <!-- add more if needed -->
+            </ul>
+        </nav>
+
+        <div class="container">
+            <header>Registration</header>
+            <!-- <form action="#"> -->
+            <div class="form first">
+                <div class="userProfile">
+                    <!-- Additional Info  -->
+                    <span class="title">User Profile</span>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>First Name</label>
+                            <input type="text" id="user-first-name" placeholder="First Name" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Last Name</label>
+                            <input type="text" id="user-last-name" placeholder="Last Name" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Email</label>
+                            <input type="text" id="user-email" placeholder="Email Address" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Password</label>
+                            <input type="text" id="user-password" placeholder="Password" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Phone Number</label>
+                            <input type="number" id="user-phone" placeholder="Phone Number" required>
+                        </div>
+
+                        <span class="title">Address</span>
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>City</label>
+                                <input type="text" id="user-address-city" placeholder="City" required>
+                            </div>
+                            <div class="input-field">
+                                <label>State</label>
+                                <input type="text" id="user-address-state" placeholder="State" required>
+                            </div>
+                            <div class="input-field">
+                                <label>Postal Code</label>
+                                <input type="text" id="user-address-postal" placeholder="Postal Code" required>
+                            </div>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Profile Summary</label>
+                            <textarea name="profileSummary" id="user-profile-summary" cols="50" rows="4"
+                                placeholder="Profile Summary" required></textarea>
+                        </div>
+
+                        <div class="input-field">
+                            <p>Upload Company Logo</p>
+                            <input type="file" id="user-resume" class="inputFile" accept=".pdf" />
+                            <input type="hidden" id="resumeUrl" />
+                        </div>
+
+                    </div>
+
+
+
+                    <button class="btnRegisterUser">
+                        <span class="btnUserRegistration">Register</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <!-- <button class="btnRegisterUser">Register</button> -->
+
+    </div>
+
+    <script type="module" src="../scripts/userRegistration.js"></script>
+</body>
+
+</html>

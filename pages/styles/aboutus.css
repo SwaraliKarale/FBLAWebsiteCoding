@@ -1,0 +1,136 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #e7e7e7;
+}
+
+.main-page {
+    height: 25vh;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0px;
+    padding-left: 0%;
+    padding-right: 10%;
+    position: sticky;
+    top: 0;
+    background-color: #e7e7e7; /* Set a background color if needed */
+    z-index: 100; /* Set a higher z-index to ensure it's above other elements */
+}
+
+.logo img {
+    width: 130px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 0;
+    color: #1066c0;
+    font-size: 30px;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+nav ul li a {
+    font-size: 17px;
+    color: #1066c0;
+    text-decoration: none;
+    font-weight: light;
+}
+
+nav ul li a:hover {
+    color: black; /* Keep the text color blue */
+    text-decoration: underline; /* Add an underline effect */
+    text-underline-position: under;
+    text-decoration-color: black; /* Set the underline color to black */
+    transition: .3s;
+}
+
+
+button {
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: none;
+    background: #1066c0;
+    color: white;
+    font-size: 16px;
+    transition: .4s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.about-us-section {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+    padding-left: 30%;
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    font-weight: bold;
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background:#1066c0;
+    position: absolute;
+    left: 0;
+    bottom:-8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+    width: 50%;
+
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+    padding-left: 20%;
+}
+
+.tab-contents ul li span {
+    color: #1066c0;
+    font-size: 20px;
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
